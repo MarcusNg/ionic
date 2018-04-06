@@ -1,13 +1,13 @@
 ## Ionic Mobile Dev
-### Segfaulting Shibish
-#### Ish Mahdi, Marcus Ng, and Gordon Lei
+## Segfaulting Shibish
+### Ish Mahdi, Marcus Ng, and Gordon Lei
 
 [Ionic Framework](https://ionicframework.com/)
 
 [Ionic Docs](https://ionicframework.com/docs/)
 
 
-### What is Ionic?
+## What is Ionic?
 
 Ionic is an HTML5 mobile app development framework used to create hybrid mobile apps (iOS, Android, and Windows). Users develop apps using HTML, CSS (SCSS), and JS (TS).
 
@@ -68,5 +68,7 @@ Ionic View allows developers to share their apps before they are released on the
 
 ## Demo Code
 **PICTURES**
+
 **CODE**
+
 **LINK REPO TOO**
