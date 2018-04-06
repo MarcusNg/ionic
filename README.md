@@ -68,7 +68,37 @@ Ionic View allows developers to share their apps before they are released on the
 
 ## Demo Code
 **PICTURES**
+[Demo Code Repo](https://github.com/GordonLei/ProbablyNotSandwhich)
+How to view + use demo code: 
+- Clone the repo
+- In the repo navigate through src/pages/home
+- Copy and paste the three files into the similar location within our project. 
+- Make sure that your app either by default has a way to go to HomePage or can navigate to HomePage. (use the documentation to help you create a button that leads to HomePage if neccessary). 
 
-**CODE**
-
-**LINK REPO TOO**
+We will be mainly focusing on the TS (typescript) and html aspects with ionic. 
+Our demo code will teach you how to make these features of ionic:
+- Actionsheets
+  These are the options that pop up when you slide up or down from the edges of your screen, pop up from pressing buttons, or from holding down something. These are mroe or less a set of options you can do after triggering an event. 
+  - First in your .ts file, create a variable for your action sheet by doing:
+  '''
+  constructor(
+    public <action sheet name>: ActionSheetController
+  )
+  '''
+  - Then create a function to activate your action sheet by doing and input your desired name and buttons that you want the action sheet to have.:
+  '''
+  <function name>(){
+    let <name for variable taht holds all of action sheet's information> = this.<action sheet name>.create({
+      title: " <title you want> ",
+      subtitle : " <optional subtitle you want> ",
+      buttons : [<whatever buttons you want your action sheet to have>]
+      });
+      <name for variable taht holds all of action sheet's information>.present();
+    }
+  '''
+- Alerts
+- Prompts
+- Buttons
+- Dynamic Events
+- Menus
+- Ranges 
