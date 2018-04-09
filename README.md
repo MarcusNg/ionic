@@ -78,6 +78,10 @@ The left column is iOS, while the right is Android.
   <img src="images/4_marketwatch.png">
 </p>
 
+
+[More Top Ionic Apps](https://showcase.ionicframework.com/apps/top)
+
+
 ## Demo Code
 **PICTURES**
 
@@ -95,14 +99,16 @@ Our demo code will teach you how to make these features of ionic:
   - These are the options that pop up when you slide up or down from the edges of your screen, pop up from pressing buttons, or from holding down something. These are more or less a set of options you can do after triggering an event. 
   
   To create action sheets:
+  
   - First in your .ts file, create a variable for your action sheet within the overall page constructor by adding this in the constructor:
   ```
   constructor(
-  ....
+  ...
     public <action sheet name>: ActionSheetController,
-  ....
+  ...
   )
   ```
+  
   - Then create a function to create your action sheet by inputting your desired name and buttons that you want the action sheet to have:
   ```
   <function name>(){
@@ -114,6 +120,7 @@ Our demo code will teach you how to make these features of ionic:
       <name for variable that holds all of action sheet's information>.present();
     }
   ```
+  
   - For example: 
   ```
   presentActionSheet() {
@@ -158,14 +165,16 @@ Our demo code will teach you how to make these features of ionic:
   Alerts are what they sound like they do; they are pop ups that alert you of something.
   
   To create alerts:
+  
   - First in your .ts file, create a variable for your action sheet within the overall page constructor by adding this in the constructor:
   ```
   constructor(
-  ....
+  ...
     public <alert name>: AlertController,
-  ....
+  ...
   )
   ```
+  
   - Then create a method to create the alert:
   ```
   <function name>(){
@@ -177,6 +186,7 @@ Our demo code will teach you how to make these features of ionic:
       <name for variable holds all of alert's information>.present();
     }
   ```
+  
   - Ex)
   ```
   presentAlert(){
@@ -188,6 +198,7 @@ Our demo code will teach you how to make these features of ionic:
     alert.present();
   }
   ```
+  
   - Buttons
     - Buttons hold a function and will activate / do the function the button is triggered by a user input.
     - To create an ionic button, in your html write: 
@@ -199,7 +210,7 @@ Our demo code will teach you how to make these features of ionic:
     - Then in your .ts file, create the function of whatever you want the button to do, whether it be to give the user an alert, pop up an action sheet, etc.
     - When creating specific buttons within things such as action sheets, you should know that buttons are stored in a list of dictionaries. For example, if you are creating buttons within an actionsheet, the syntax is:
     ```
-    ....
+    ...
     buttons: [
       {
         text: "<name on the button",
@@ -210,11 +221,12 @@ Our demo code will teach you how to make these features of ionic:
       },
       <other buttons if needed>
     ]
-    ....
+    ...
     ```
+    
     - For example:
-    ```
-    buttons: [
+      ```
+      buttons: [
         //order of buttons show by which one you add first
         {
           text: 'Destructive',
@@ -242,7 +254,7 @@ Our demo code will teach you how to make these features of ionic:
           }
         }
       ]
-    ```
+      ```
   - Cards
   - Dynamic Events / User input
   - Menus
@@ -254,7 +266,7 @@ Our demo code will teach you how to make these features of ionic:
     ```
     <ion-icon name = <name of the icon you wanted>></ion-icon>
     ```
-    - Example) 
+    - Example:
     ```
     <ion-icon name = "planet"></ion-icon>
     ```
