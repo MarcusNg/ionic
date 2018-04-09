@@ -181,9 +181,9 @@ Our demo code will teach you how to make these features of ionic:
     let <name for variable that holds all of alert's information> = this.<alert name>.create({ 
       title: " title you want ",
       subtitle : " optional subtitle you want ",
-      buttons : [<whatever buttons you want your alert to have. button syntax will be explained later>]
+      buttons : [whatever buttons you want your alert to have. button syntax will be explained later]
       });
-      <name for variable holds all of alert's information>.present();
+      name for variable holds all of alert's information.present();
     }
   ```
   
