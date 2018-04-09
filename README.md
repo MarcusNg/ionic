@@ -38,8 +38,8 @@ Ionic relies on two dependencies:
 ## Simulators
 Different simulators are displayed in your browser. They reflect live changes to code.
 
-**INSERT PICTURES**
-  
+![](images/1_simulator.png)
+
 ## Hybrid Apps
 ### Pros
 - Single source code (easier to maintain and update)
@@ -58,13 +58,25 @@ Different simulators are displayed in your browser. They reflect live changes to
 ## Ionic View
 Ionic View allows developers to share their apps before they are released on the app stores. It also allows developers to A/B test their apps to figure out which version their users like more. Users are able to submit feedback with screenshots and comments. This is an alternative to Apple's TestFlight, which is used to collect feedback on unreleased iOS apps. Compared to TestFlight, however, Ionic View enables developers to go around the iOS App Review Board by skipping Apple's app review process to test their app. If developers used TestFlight, the iOS App Review Board would have to review their app first to make sure it complies with Apple's strict app guidelines.
 
-**INSERT PICS**
-
+<p align="center">
+  <img src="images/1_ionicview.png">
+</p>
 
 ## App Example: Market Watch
+Market Watch was created using the Ionic Framework. Notice the similar user interfaces of the iOS and Android versions of the app.
 
-**INSERT PICS**
 
+The left column is iOS, while the right is Android.
+
+<p align="center">
+  <img src="images/1_marketwatch.png">
+  <img src="images/2_marketwatch.png">
+</p>
+
+<p align="center">
+  <img src="images/3_marketwatch.png">
+  <img src="images/4_marketwatch.png">
+</p>
 
 ## Demo Code
 **PICTURES**
