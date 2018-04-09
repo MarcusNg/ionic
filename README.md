@@ -95,7 +95,7 @@ How to view + use demo code:
 
 We will be mainly focusing on the TS (typescript) and html aspects with ionic. 
 Our demo code will teach you how to make these features of ionic:
-- Action Sheets
+- **Action Sheets**
   - These are the options that pop up when you slide up or down from the edges of your screen, pop up from pressing buttons, or from holding down something. These are more or less a set of options you can do after triggering an event. 
   
   To create action sheets:
@@ -120,8 +120,8 @@ Our demo code will teach you how to make these features of ionic:
       <name for variable that holds all of action sheet's information>.present();
     }
   ```
-- Alerts
-  Alerts are what they sound like they do; they are pop ups that alert you of something.
+- **Alerts**
+  - Alerts are what they sound like they do; they are pop ups that alert you of something.
   
   To create alerts:
   
@@ -136,7 +136,7 @@ Our demo code will teach you how to make these features of ionic:
   
   - Then create a method to create the alert:
   ```
-  <function name>(){
+  customFunctionName(){
     let <name for variable that holds all of alert's information> = this.<alert name>.create({ 
       title: " title you want ",
       subtitle : " optional subtitle you want ",
