@@ -120,47 +120,6 @@ Our demo code will teach you how to make these features of ionic:
       <name for variable that holds all of action sheet's information>.present();
     }
   ```
-  
-  - For example: 
-  ```
-  presentActionSheet() {
-
-    //Action sheets are composed of an array of buttons that have different properties and other nifty stuff like titles.
-    let actionSheet = this.actionSheetCtrl.create({
-      title: 'Modify your album', //this is the title of the action sheet
-      subTitle: 'Im not creative enough to think of a subTitle',
-      buttons: [
-        //order of buttons show by which one you add first
-        {
-          text: 'Destructive',
-          role: 'destructive', //destructive means that it will cancel out of the sheet 
-          /*
-          Handler is a function that tells what the button does
-          handler: () => { COOL FUNCTION PROCESS THINGO HERE }
-          This is a function declaration (basically a shorthand way to make a function).
-            Shorthand for doing:
-              var handler = function() { COOL FUNCTION PROCESS THINGO HERE }
-          */
-          handler: () => {
-            console.log('Destructive clicked');
-          }
-        },{
-          text: 'Archive',
-          handler: () => {
-            console.log('Archive clicked');
-          }
-        },{
-          text: 'Cancel',
-          role: 'cancel', //cancel buttons make them appear at the bottom
-          handler: () => {
-            console.log('Cancel clicked');
-          }
-        }
-      ]
-    });
-    actionSheet.present(); //this basically means display the action sheet
-  }
-  ```
 - Alerts
   Alerts are what they sound like they do; they are pop ups that alert you of something.
   
