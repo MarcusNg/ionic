@@ -178,19 +178,8 @@ Our demo code will teach you how to make these features of ionic:
   - Then create a method to create the alert:
   ```
   <function name>(){
-    let <name for variable that holds all of action sheet's information> = this.<action sheet name>.create({
+    let <name for variable that holds all of alert's information> = this.<alert name>.create ISH({      
       title: " <title you want> ",
-      subtitle : " <optional subtitle you want> ",
-      buttons : [<whatever buttons you want your action sheet to have. button syntax will be explained later>]
-      });
-      <name for variable that holds all of action sheet's information>.present();
-    }
-  ```
-  
-  ```
-  <function name>(){
-    let <name for variable that holds all of alert's information> = this.<alert name>.create({      
-      //title: " <title you want> ",
       subtitle : " <optional subtitle you want> ",
       buttons : [<whatever buttons you want your alert to have. button syntax will be explained later>]
       });
