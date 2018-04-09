@@ -109,9 +109,8 @@ Our demo code will teach you how to make these features of ionic:
   )
   ```
   
-  - Then create a function to create your action sheet by inputting your desired name and buttons that you want the action sheet to have:
-  ```
-  <function name>(){
+  - Then create a function to create your action sheet by inputting your desired name and buttons that you want the action sheet to have (replace customFunctionName with a name you want. readMe doesn't like angle brackets outside of braces):
+  ```<customFunctionName>(){
     let <name for variable that holds all of action sheet's information> = this.<action sheet name>.create({
       title: " <title you want> ",
       subtitle : " <optional subtitle you want> ",
@@ -122,21 +121,18 @@ Our demo code will teach you how to make these features of ionic:
   ```
 - **Alerts**
   - Alerts are what they sound like they do; they are pop ups that alert you of something.
-  
-  To create alerts:
-  
-  - First in your .ts file, create a variable for your action sheet within the overall page constructor by adding this in the constructor:
-  ```
-  constructor(
-  ...
-    public <alert name>: AlertController,
-  ...
-  )
-  ```
-  
-  - Then create a method to create the alert:
-  ```
-  customFunctionName(){
+    To create alerts:
+    - First in your .ts file, create a variable for your action sheet within the overall page constructor by adding this in the constructor:
+    ```
+    constructor(
+    ...
+      public <alert name>: AlertController,
+    ...
+    )
+    ```
+    - Then create a method to create the alert(replace customFunctionName with a name you want. readMe doesn't like angle brackets outside of braces):
+    ```
+    customFunctionName(){
     let <name for variable that holds all of alert's information> = this.<alert name>.create({ 
       title: " title you want ",
       subtitle : " optional subtitle you want ",
@@ -144,7 +140,7 @@ Our demo code will teach you how to make these features of ionic:
       });
       name for variable holds all of alert's information.present();
     }
-  ```
+    ```
   
   - Ex)
   ```
@@ -158,7 +154,7 @@ Our demo code will teach you how to make these features of ionic:
   }
   ```
   
-  - Buttons
+  - **Buttons**
     - Buttons hold a function and will activate / do the function the button is triggered by a user input.
     - To create an ionic button, in your html write: 
     ```
@@ -215,17 +211,34 @@ Our demo code will teach you how to make these features of ionic:
       ]
       ```
   - Cards
+    - Cards are like Bootstrap's Cards; they are special ways to display information.
+    - You can create cards by following this syntax in your html:
+    ``` <ion-card> <ion-card-header> SAMPLE-TEXT.mp3 </ion-card-header> <ion-card-content> Content here </ion-card-content></ion-card-content></ion-card>```
+      - ion-card is the overall wrapper for the card.
+      - ion-card-header is the special heading you want to put at the top of the Card. 
+      - ion-card-content is where you place your desired inner text. 
   - Dynamic Events / User input
+      - Ionic allows you to store information about how people intereact with items, such as how many times they tapped, pressed, panned, or swiped a button. 
+        - To do this, first add a variable in your .ts file to store the # of times something is done. 
+          - Ex) ```public countPress: number = 0; ```
+        - Then create a function that will update that variable.
+          - Ex) ```
+                panEvent(e){
+                  this.countPan++;
+                }
+                ```
+        - Then in your .html file create your button followign this syntax:
+        ```<ion-card (<action name>)="<eventUpdate function name>($event)">
+            <div> Time swiped: {{<eventVariable name>}} </div>
+            </ion-card>
+        ```
+        - Ex) 
   - Menus
   - Ranges 
   - icons
-  Ionic has preset icons that you can use to stylize buttons and other such features.
-    - First, look for which icon you want in [Ionic's Icon List](https://ionicframework.com/docs/ionicons/) and remember the name of the icon
-    - In your html, where ever you want to put the icon add:
-    ```
-    <ion-icon name = <name of the icon you wanted>></ion-icon>
-    ```
-    - Example:
-    ```
-    <ion-icon name = "planet"></ion-icon>
-    ```
+    - Ionic has preset icons that you can use to stylize buttons and other such features.
+      - First, look for which icon you want in [Ionic's Icon List](https://ionicframework.com/docs/ionicons/) and remember the name of the icon
+      - In your html, where ever you want to put the icon add:
+      ```<ion-icon name = <name of the icon you wanted>></ion-icon>```
+      - Example:
+      ```<ion-icon name = "planet"></ion-icon>```
