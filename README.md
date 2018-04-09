@@ -79,8 +79,8 @@ How to view + use demo code:
 
 We will be mainly focusing on the TS (typescript) and html aspects with ionic. 
 Our demo code will teach you how to make these features of ionic:
-- Actionsheets
-  - These are the options that pop up when you slide up or down from the edges of your screen, pop up from pressing buttons, or from holding down something. These are mroe or less a set of options you can do after triggering an event. 
+- Action Sheets
+  - These are the options that pop up when you slide up or down from the edges of your screen, pop up from pressing buttons, or from holding down something. These are more or less a set of options you can do after triggering an event. 
   
   To create action sheets:
   - First in your .ts file, create a variable for your action sheet within the overall page constructor by adding this in the constructor:
@@ -91,15 +91,15 @@ Our demo code will teach you how to make these features of ionic:
   ....
   )
   ```
-  - Then create a function to create your action sheet byinputting your desired name and buttons that you want the action sheet to have.:
+  - Then create a function to create your action sheet by inputting your desired name and buttons that you want the action sheet to have:
   ```
   <function name>(){
-    let <name for variable taht holds all of action sheet's information> = this.<action sheet name>.create({
+    let <name for variable that holds all of action sheet's information> = this.<action sheet name>.create({
       title: " <title you want> ",
       subtitle : " <optional subtitle you want> ",
       buttons : [<whatever buttons you want your action sheet to have. button syntax will be explained later>]
       });
-      <name for variable taht holds all of action sheet's information>.present();
+      <name for variable that holds all of action sheet's information>.present();
     }
   ```
   - For example: 
@@ -157,7 +157,7 @@ Our demo code will teach you how to make these features of ionic:
   - Then create a method to create the alert:
   ```
   <function name>(){
-    let <name for variable taht holds all of alert's information> = this.<alert name>.create({
+    let <name for variable that holds all of alert's information> = this.<alert name>.create({
       title: " <title you want> ",
       subtitle : " <optional subtitle you want> ",
       buttons : [<whatever buttons you want your alert to have. button syntax will be explained later>]
@@ -185,7 +185,7 @@ Our demo code will teach you how to make these features of ionic:
     ```
     - Ionic already has preset "button classes" that you can type directly into the button tag without having to write "class= ". These can be found here: [Ionic buttons](https://ionicframework.com/docs/api/components/button/Button/)
     - Then in your .ts file, create the function of whatever you want the button to do, whether it be to give the user an alert, pop up an action sheet, etc.
-    - When creating specfic buttons within things such as action sheets, you should know that buttons are stored in a list of dictionaries. For example, if you are creating buttons within an actionsheet, the syntax is:
+    - When creating specific buttons within things such as action sheets, you should know that buttons are stored in a list of dictionaries. For example, if you are creating buttons within an actionsheet, the syntax is:
     ```
     ....
     buttons: [
@@ -209,10 +209,10 @@ Our demo code will teach you how to make these features of ionic:
           role: 'destructive', //destructive means that it will cancel out of the sheet 
           /*
           Handler is a function that tells what the button does
-          handler: () => { COOL FUNCTION PROCESS THINGO HERE }
+          handler: () => { COOL FUNCTION HERE }
           This is a function declaration (basically a shorthand way to make a function).
             Shorthand for doing:
-              var handler = function() { COOL FUNCTION PROCESS THINGO HERE }
+              var handler = function() { COOL FUNCTION HERE }
           */
           handler: () => {
             console.log('Destructive clicked');
