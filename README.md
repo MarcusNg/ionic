@@ -208,10 +208,9 @@ Our demo code will teach you how to make these features of ionic:
 - **Buttons**
   - Buttons hold a function and will activate / do the function the button is triggered by a user input.
   - To create an ionic button, in your html write: 
-  ```
-  <button ion-button <any special ionic button "classes you want"> (<an user input>) = "<button's function>">
-  </button
-  ```
+    ```
+    <button ion-button <any special ionic button "classes you want"> (<an user input>) = "<button's function name>"> </button>
+    ```
   - Ionic already has preset "button classes" that you can type directly into the button tag without having to write "class= ". These can be found here: [Ionic buttons](https://ionicframework.com/docs/api/components/button/Button/)
   - Then in your .ts file, create the function of whatever you want the button to do, whether it be to give the user an alert, pop up an action sheet, etc.
   - When creating specific buttons within things such as action sheets, you should know that buttons are stored in a list of dictionaries. For example, if you are creating buttons within an actionsheet, the syntax is:
