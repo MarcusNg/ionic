@@ -285,16 +285,17 @@ Our demo code will teach you how to make these features of ionic:
           }
         ```
       - Then in your .html file create your button followign this syntax:
-      ```
-      <ion-card (<action name>)="<eventUpdate function name>($event)">
-        <div> Time swiped: {{<eventVariable name>}} </div>
-      </ion-card>
-      ```
+        ```
+          <ion-card (<action name>)="<eventUpdate function name>($event)">
+          <div> Time swiped: {{<eventVariable name>}} </div>
+          </ion-card>
+        ```
       - Ex) 
-      ```<ion-card (swipe)="swipeEvent($event)">
+        ```
+          <ion-card (swipe)="swipeEvent($event)">
             <div> Time swiped: {{countSwipe}} </div>
-         </ion-card>
-      ```
+          </ion-card>
+        ```
 - Menus
   - Menus hold a list of options that you can choose from to trigger and event to occur, whether it be to navigate through pages, open up a confirmation, etc.
   - To create a menu:
@@ -308,16 +309,16 @@ Our demo code will teach you how to make these features of ionic:
       ```
       By doing this so this enables the menu functions for your code.
     - In your html, follow this syntax to create your physical menu:
-    ```
-    <ion-menu [content]=" <reference to menu> ">
-      <ion-content>
-        <ion-list>
-          PUT WHATEVER YOU WANT THE MENU TO HAVE HERE (LIKE BUTTONS AND STUFF)
-        </ion-list>
-      </ion-content>
-    </ion-menu>
-      <ion-nav <reference to menu> [root]="<name of the page you are in"> </ion-nav>
-      <button menuToggle> PUT WORDS HERE </button>
+      ```
+        <ion-menu [content]=" <reference to menu> ">
+          <ion-content>
+            <ion-list>
+              PUT WHATEVER YOU WANT THE MENU TO HAVE HERE (LIKE BUTTONS AND STUFF)
+            </ion-list>
+          </ion-content>
+        </ion-menu>
+        <ion-nav <reference to menu> [root]="<name of the page you are in"> </ion-nav>
+        <button menuToggle> PUT WORDS HERE </button>
     ```
     According to the Ionic documentation The ion-nav tag is necessary to tell the menu what it is bounded too.
     Thus, by adding a button under the ion-nav, the button will toggle the menu. 
