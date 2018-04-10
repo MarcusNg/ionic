@@ -112,9 +112,9 @@ Our demo code will teach you how to make these features of ionic:
   - First in your .ts file, create a variable for your action sheet within the overall page constructor by adding this in the constructor:
   ```
   constructor(
-  ...
-    public <action sheet name>: ActionSheetController,
-  ...
+      ...
+      public <action sheet name>: ActionSheetController,
+      ...
   )
   ```
   
@@ -133,10 +133,10 @@ Our demo code will teach you how to make these features of ionic:
     presentActionSheet() {
 
     //Action sheets are composed of an array of buttons that have different properties and other nifty stuff like titles.
-    let actionSheet = this.actionSheetCtrl.create({
-      title: 'Modify your album', //this is the title of the action sheet
-      subTitle: 'Im not creative enough to think of a subTitle',
-      buttons: [
+      let actionSheet = this.actionSheetCtrl.create({
+        title: 'Modify your album', //this is the title of the action sheet
+        subTitle: 'Im not creative enough to think of a subTitle',
+        buttons: [
         //order of buttons show by which one you add first
         {
           text: 'Destructive',
@@ -176,9 +176,9 @@ Our demo code will teach you how to make these features of ionic:
     - First in your .ts file, create a variable for your action sheet within the overall page constructor by adding this in the constructor:
     ```
     constructor(
-    ...
-      public <alert name>: AlertController,
-    ...
+        ...
+        public <alert name>: AlertController,
+        ...
     )
     ```
     - Then create a method to create the alert(replace customFunctionName with a name you want. readMe doesn't like angle brackets outside of braces):
@@ -196,12 +196,12 @@ Our demo code will teach you how to make these features of ionic:
   - Ex)
   ```
   presentAlert(){
-    let alert = this.alertCtrl.create({
-      title: "WOAH LOOK AT THIS COOL POP-UP ALERT",
-      subTitle: "PLEASE READ THIS",
-      buttons:["DISMISS"]
-    });
-    alert.present();
+      let alert = this.alertCtrl.create({
+        title: "WOAH LOOK AT THIS COOL POP-UP ALERT",
+        subTitle: "PLEASE READ THIS",
+        buttons:["DISMISS"]
+      });
+      alert.present();
   }
   ```
   
@@ -261,95 +261,96 @@ Our demo code will teach you how to make these features of ionic:
         }
       ]
       ```
-  - Cards
-    - Cards are like Bootstrap's Cards; they are special ways to display information.
-    - You can create cards by following this syntax in your html:
-    ``` <ion-card> 
-          <ion-card-header> SAMPLE-TEXT.mp3 </ion-card-header> 
-          <ion-card-content> Content here </ion-card-content>
-        </ion-card>
-    ```
-      - ion-card is the overall wrapper for the card.
-      - ion-card-header is the special heading you want to put at the top of the Card. 
-      - ion-card-content is where you place your desired inner text. 
-  - Dynamic Events / User input
-      - Ionic allows you to store information about how people interact with items, such as how many times they tapped, pressed, panned, or swiped a button. 
-        - To do this, first add a variable in your .ts file to store the # of times something is done. 
-          - Ex) ```public countPress: number = 0; ```
-        - Then create a function that will update that variable.
-          - Ex) ```
-                panEvent(e){
-                  this.countPan++;
-                }
-                ```
-        - Then in your .html file create your button followign this syntax:
-        ```<ion-card (<action name>)="<eventUpdate function name>($event)">
-            <div> Time swiped: {{<eventVariable name>}} </div>
-            </ion-card>
-        ```
-        - Ex) 
-        ```
-        <ion-card (swipe)="swipeEvent($event)">
+- Cards
+  - Cards are like Bootstrap's Cards; they are special ways to display information.
+  - You can create cards by following this syntax in your html:
+  ``` 
+  <ion-card> 
+    <ion-card-header> SAMPLE-TEXT.mp3 </ion-card-header> 
+    <ion-card-content> Content here </ion-card-content>
+  </ion-card>
+  ```
+    - ion-card is the overall wrapper for the card.
+    - ion-card-header is the special heading you want to put at the top of the Card. 
+    - ion-card-content is where you place your desired inner text. 
+- Dynamic Events / User input
+    - Ionic allows you to store information about how people interact with items, such as how many times they tapped, pressed, panned, or swiped a button. 
+      - To do this, first add a variable in your .ts file to store the # of times something is done. 
+        - Ex) ```public countPress: number = 0; ```
+      - Then create a function that will update that variable.
+        - Ex) ```
+              panEvent(e){
+                this.countPan++;
+              }
+              ```
+      - Then in your .html file create your button followign this syntax:
+      ```
+      <ion-card (<action name>)="<eventUpdate function name>($event)">
+          <div> Time swiped: {{<eventVariable name>}} </div>
+      </ion-card>
+      ```
+      - Ex) 
+      ```
+      <ion-card (swipe)="swipeEvent($event)">
         <div> Time swiped: {{countSwipe}} </div>
-        </ion-card>
-        ```
-  - Menus
-    - Menus hold a list of options that you can choose from to trigger and event to occur, whether it be to navigate through pages, open up a confirmation, etc.
-    - To create a menu:
-      - First in your .ts file, create a variable for your menu sheet within the overall page constructor by adding this in the constructor:
-        -Ex)
-        ```
-        constructor(
-          ...
-          menu: MenuController
-          ...) {menu.enable(true);}
-        ```
-        By doing this so this enables the menu functions for your code.
-      -  In your html, follow this syntax to create your physical menu:
+      </ion-card>
       ```
-      <ion-menu [content]=" <reference to menu> ">
-        <ion-content>
-          <ion-list>
-            PUT WHATEVER YOU WANT THE MENU TO HAVE HERE (LIKE BUTTONS AND STUFF)
-          </ion-list>
-        </ion-content>
-      </ion-menu>
-
-      <ion-nav <reference to menu> [root]="<name of the page you are in"> </ion-nav>
-      <button menuToggle> PUT WORDS HERE </button>
-      ```
-      According to the Ionic documentation The ion-nav tag is necessary to tell the menu what it is bounded too.
-      Thus, by adding a button under the ion-nav, the button will toggle the menu. 
-  - Ranges 
-    - Ranges are basically sliders that the user can drag to either increase or decrease a variable.
-    - In your .html file, to create a range follow this syntax:
-      ```
-      <ion-item>
-        <ion-range min="<put a number here>" max = "<put a number here>">
-          <ion-label range-left> <put the first number here> </ion-label>
-          <ion-label range-right> <put the second number here> </ion-label>
-        </ion-range>
-      </ion-item>
-      ```
-        - Ion-labels puts labels on the sides of the range to show what your min and max is; however ion-labels may not show the correct min and maxes if you do not put the correct numbers within the label tags.
-        - If you want to put "snaps" on the range, or in other words put a set interval on the range, within the ion-range tag add:
-        ```
-        step="<your desired increment>" snaps = true
-        ```
+- Menus
+  - Menus hold a list of options that you can choose from to trigger and event to occur, whether it be to navigate through pages, open up a confirmation, etc.
+  - To create a menu:
+    - First in your .ts file, create a variable for your menu sheet within the overall page constructor by adding this in the constructor:
       - Ex)
       ```
-      <ion-item>
-        <ion-range min="0" max="100">
-          //you can write labels to show the bounds of the slider
-          <ion-label range-left> 0 </ion-label>
-          <ion-label range-right> 100 </ion-label>
-        </ion-range>
-      </ion-item>
+      constructor(
+        ...
+        menu: MenuController
+        ...) {menu.enable(true);}
       ```
-  - Icons
-    - Ionic has preset icons that you can use to stylize buttons and other such features.
-      - First, look for which icon you want in [Ionic's Icon List](https://ionicframework.com/docs/ionicons/) and remember the name of the icon
-      - In your html, where ever you want to put the icon add:
-      ```<ion-icon name = <name of the icon you wanted>></ion-icon>```
-      - Example:
-      ```<ion-icon name = "planet"></ion-icon>```
+      By doing this so this enables the menu functions for your code.
+    -  In your html, follow this syntax to create your physical menu:
+    ```
+    <ion-menu [content]=" <reference to menu> ">
+      <ion-content>
+        <ion-list>
+          PUT WHATEVER YOU WANT THE MENU TO HAVE HERE (LIKE BUTTONS AND STUFF)
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-nav <reference to menu> [root]="<name of the page you are in"> </ion-nav>
+    <button menuToggle> PUT WORDS HERE </button>
+    ```
+    According to the Ionic documentation The ion-nav tag is necessary to tell the menu what it is bounded too.
+    Thus, by adding a button under the ion-nav, the button will toggle the menu. 
+- Ranges 
+  - Ranges are basically sliders that the user can drag to either increase or decrease a variable.
+  - In your .html file, to create a range follow this syntax:
+    ```
+    <ion-item>
+      <ion-range min="<put a number here>" max = "<put a number here>">
+        <ion-label range-left> <put the first number here> </ion-label>
+        <ion-label range-right> <put the second number here> </ion-label>
+      </ion-range>
+    </ion-item>
+    ```
+   - Ion-labels puts labels on the sides of the range to show what your min and max is; however ion-labels may not show the correct min and maxes if you do not put the correct numbers within the label tags.
+   - If you want to put "snaps" on the range, or in other words put a set interval on the range, within the ion-range tag add:
+      ```
+      step="<your desired increment>" snaps = true
+      ```
+    - Ex)
+    ```
+    <ion-item>
+      <ion-range min="0" max="100">
+        //you can write labels to show the bounds of the slider
+        <ion-label range-left> 0 </ion-label>
+        <ion-label range-right> 100 </ion-label>
+      </ion-range>
+    </ion-item>
+    ```
+- Icons
+  - Ionic has preset icons that you can use to stylize buttons and other such features.
+    - First, look for which icon you want in [Ionic's Icon List](https://ionicframework.com/docs/ionicons/) and remember the name of the icon
+    - In your html, where ever you want to put the icon add:
+    ```<ion-icon name = <name of the icon you wanted>></ion-icon>```
+    - Example:
+    ```<ion-icon name = "planet"></ion-icon>```
