@@ -284,10 +284,10 @@ Our demo code will teach you how to make these features of ionic:
             this.countPan++;
           }
         ```
-      - Then in your .html file create your button followign this syntax:
+      - Then in your .html file create your button following this syntax:
         ```
           <ion-card (<action name>)="<eventUpdate function name>($event)">
-          <div> Time swiped: {{<eventVariable name>}} </div>
+            <div> Time swiped: {{<eventVariable name>}} </div>
           </ion-card>
         ```
       - Ex) 
@@ -310,18 +310,18 @@ Our demo code will teach you how to make these features of ionic:
       By doing this so this enables the menu functions for your code.
     - In your html, follow this syntax to create your physical menu:
       ```
-        <ion-menu [content]=" <reference to menu> ">
-          <ion-content>
-            <ion-list>
-              PUT WHATEVER YOU WANT THE MENU TO HAVE HERE (LIKE BUTTONS AND STUFF)
-            </ion-list>
-          </ion-content>
-        </ion-menu>
-        <ion-nav <reference to menu> [root]="<name of the page you are in"> </ion-nav>
-        <button menuToggle> PUT WORDS HERE </button>
-    ```
-    According to the Ionic documentation The ion-nav tag is necessary to tell the menu what it is bounded too.
-    Thus, by adding a button under the ion-nav, the button will toggle the menu. 
+      <ion-menu [content]=" <reference to menu> ">
+        <ion-content>
+           <ion-list>
+             PUT WHATEVER YOU WANT THE MENU TO HAVE HERE (LIKE BUTTONS AND STUFF)
+           </ion-list>
+        </ion-content>
+      </ion-menu>
+      <ion-nav <reference to menu> [root]="<name of the page you are in"> </ion-nav>
+      <button menuToggle> PUT WORDS HERE </button>
+      ```
+      According to the Ionic documentation The ion-nav tag is necessary to tell the menu what it is bounded too.
+      Thus, by adding a button under the ion-nav, the button will toggle the menu. 
 - Ranges 
   - Ranges are basically sliders that the user can drag to either increase or decrease a variable.
   - In your .html file, to create a range follow this syntax:
