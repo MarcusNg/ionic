@@ -205,63 +205,63 @@ Our demo code will teach you how to make these features of ionic:
   }
   ```
   
-  - **Buttons**
-    - Buttons hold a function and will activate / do the function the button is triggered by a user input.
-    - To create an ionic button, in your html write: 
-    ```
-    <button ion-button <any special ionic button "classes you want"> (<an user input>) = "<button's function>">
-    </button
-    ```
-    - Ionic already has preset "button classes" that you can type directly into the button tag without having to write "class= ". These can be found here: [Ionic buttons](https://ionicframework.com/docs/api/components/button/Button/)
-    - Then in your .ts file, create the function of whatever you want the button to do, whether it be to give the user an alert, pop up an action sheet, etc.
-    - When creating specific buttons within things such as action sheets, you should know that buttons are stored in a list of dictionaries. For example, if you are creating buttons within an actionsheet, the syntax is:
-    ```
-    ...
-    buttons: [
-      {
-        text: "<name on the button",
-        role: "<specific preset ionic button roles such as "cancel". You can read more about this in the documentation>",
-        handler: () => {
-          <whatever you want the function to do. ex) log something into console>
-          }
-      },
-      <other buttons if needed>
-    ]
-    ...
-    ```
-    
-    - For example:
-      ```
-      buttons: [
-        //order of buttons show by which one you add first
-        {
-          text: 'Destructive',
-          role: 'destructive', //destructive means that it will cancel out of the sheet 
-          /*
-          Handler is a function that tells what the button does
-          handler: () => { COOL FUNCTION HERE }
-          This is a function declaration (basically a shorthand way to make a function).
-            Shorthand for doing:
-              var handler = function() { COOL FUNCTION HERE }
-          */
-          handler: () => {
-            console.log('Destructive clicked');
-          }
-        },{
-          text: 'Archive',
-          handler: () => {
-            console.log('Archive clicked');
-          }
-        },{
-          text: 'Cancel',
-          role: 'cancel', //cancel buttons make them appear at the bottom
-          handler: () => {
-            console.log('Cancel clicked');
-          }
+- **Buttons**
+  - Buttons hold a function and will activate / do the function the button is triggered by a user input.
+  - To create an ionic button, in your html write: 
+  ```
+  <button ion-button <any special ionic button "classes you want"> (<an user input>) = "<button's function>">
+  </button
+  ```
+  - Ionic already has preset "button classes" that you can type directly into the button tag without having to write "class= ". These can be found here: [Ionic buttons](https://ionicframework.com/docs/api/components/button/Button/)
+  - Then in your .ts file, create the function of whatever you want the button to do, whether it be to give the user an alert, pop up an action sheet, etc.
+  - When creating specific buttons within things such as action sheets, you should know that buttons are stored in a list of dictionaries. For example, if you are creating buttons within an actionsheet, the syntax is:
+  ```
+  ...
+  buttons: [
+    {
+      text: "<name on the button",
+      role: "<specific preset ionic button roles such as "cancel". You can read more about this in the documentation>",
+      handler: () => {
+        <whatever you want the function to do. ex) log something into console>
         }
-      ]
-      ```
-- Cards
+    },
+    <other buttons if needed>
+  ]
+  ...
+  ```
+
+  - For example:
+    ```
+    buttons: [
+      //order of buttons show by which one you add first
+      {
+        text: 'Destructive',
+        role: 'destructive', //destructive means that it will cancel out of the sheet 
+        /*
+        Handler is a function that tells what the button does
+        handler: () => { COOL FUNCTION HERE }
+        This is a function declaration (basically a shorthand way to make a function).
+          Shorthand for doing:
+            var handler = function() { COOL FUNCTION HERE }
+        */
+        handler: () => {
+          console.log('Destructive clicked');
+        }
+      },{
+        text: 'Archive',
+        handler: () => {
+          console.log('Archive clicked');
+        }
+      },{
+        text: 'Cancel',
+        role: 'cancel', //cancel buttons make them appear at the bottom
+        handler: () => {
+          console.log('Cancel clicked');
+        }
+      }
+    ]
+    ```
+- **Cards**
   - Cards are like Bootstrap's Cards; they are special ways to display information.
   - You can create cards by following this syntax in your html:
     ``` 
@@ -273,7 +273,7 @@ Our demo code will teach you how to make these features of ionic:
     - ion-card is the overall wrapper for the card.
     - ion-card-header is the special heading you want to put at the top of the Card. 
     - ion-card-content is where you place your desired inner text. 
-- Dynamic Events / User input
+- **Dynamic Events / User input**
     - Ionic allows you to store information about how people interact with items, such as how many times they tapped, pressed, panned, or swiped a button. 
       - To do this, first add a variable in your .ts file to store the # of times something is done. 
         - Ex) ```public countPress: number = 0; ```
@@ -296,7 +296,7 @@ Our demo code will teach you how to make these features of ionic:
             <div> Time swiped: {{countSwipe}} </div>
           </ion-card>
         ```
-- Menus
+- **Menus**
   - Menus hold a list of options that you can choose from to trigger and event to occur, whether it be to navigate through pages, open up a confirmation, etc.
   - To create a menu:
     - First in your .ts file, create a variable for your menu sheet within the overall page constructor by adding this in the constructor:
@@ -322,7 +322,7 @@ Our demo code will teach you how to make these features of ionic:
       ```
       According to the Ionic documentation The ion-nav tag is necessary to tell the menu what it is bounded too.
       Thus, by adding a button under the ion-nav, the button will toggle the menu. 
-- Ranges 
+- **Ranges** 
   - Ranges are basically sliders that the user can drag to either increase or decrease a variable.
   - In your .html file, to create a range follow this syntax:
   
@@ -350,7 +350,7 @@ Our demo code will teach you how to make these features of ionic:
       </ion-range>
     </ion-item>
     ```
-- Icons
+- **Icons**
   - Ionic has preset icons that you can use to stylize buttons and other such features.
     - First, look for which icon you want in [Ionic's Icon List](https://ionicframework.com/docs/ionicons/) and remember the name of the icon
     - In your html, where ever you want to put the icon add:
